@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pentru Mami ❤️</title>
+
+<style>
+body{
+    margin:0;
+    background:linear-gradient(135deg,#ff9ecf,#ffd6e8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial,sans-serif;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,.2);
+    width:350px;
+}
+
+button{
+    padding:12px 22px;
+    margin:10px;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+#da{
+    background:#4CAF50;
+    color:white;
+}
+
+#nu{
+    background:#ff4d4d;
+    color:white;
+}
+
+h1{
+    color:#ff3b7d;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<h1>❤️ Bună, mami! ❤️</h1>
+
+<p id="text">
+Am o întrebare foarte importantă... 🥺
+</p>
+
+<button onclick="incepe()">Continuă ❤️</button>
+
+<div id="butoane" style="display:none;">
+<p style="font-size:20px;">
+🥤 Îmi iei apă fructată când ieșim la Nr. 9?
+</p>
+
+<button id="da" onclick="da()">DA ❤️</button>
+<button id="nu" onclick="nuu()">NU 😅</button>
+</div>
+
+</div>
+
+<script>
+
+let apasari=0;
+
+function incepe(){
+document.querySelector("button").style.display="none";
+document.getElementById("text").style.display="none";
+document.getElementById("butoane").style.display="block";
+}
+
+function da(){
+document.body.innerHTML=
+"<div style='display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;background:#ffd6e8;font-size:35px;text-align:center;'>🥳<br>Mulțumesc, mami! ❤️<br>Ești cea mai tare!<br>🥤❤️</div>";
+}
+
+function nuu(){
+
+apasari++;
+
+if(apasari==1){
+alert("😢 Sigur?");
+}
+
+else if(apasari==2){
+alert("🥺 Mai gândește-te...");
+}
+
+else{
+document.getElementById("nu").style.display="none";
+alert("😂 Acum a rămas doar DA!");
+}
+
+}
+
+</script>
+
+</body>
+</html>
